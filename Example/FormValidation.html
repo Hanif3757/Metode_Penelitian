@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <script>  
+        function validateform(){  
+ 
+            // validasi dengan name
+            var name = document.getElementById("nama_p").value;
+            var email = document.getElementById("email").value;
+            var jam = document.getElementById("jam_k").value;
+            var tujuan = document.getElementById("tujuan_k").value;
+            var jumlah = document.getElementById("jumlsh_t").value;  
+            // console.log(name);
+            // time validation
+            var errorMsg = "";
+            // regular expression to match required time format
+            // re = /^(\d{1,2}):(\d{2})(:00)?([ap]m)?$/;
+
+           
+        //         // Email validation
+        //     var atposition=email.indexOf("@");  
+        //     var dotposition=email.lastIndexOf("."); 
+
+        //     if (atposition < 1 || dotposition < atposition+2 || dotposition+2 >= email.length){  
+        //         alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition); 
+        //         hasil = false; 
+        //         return hasil;
+                
+        //     }else{
+        //         alert('Berhasil');
+        //     }   
+
+        //     var tujuan = document.getElementById("tujuan_k")
+
+            if (nama != "" && email!="" && jam !="" && tujuan !="" && jml_tiket !="") {
+                return true;
+            }else{
+                alert('Anda harus mengisi data dengan lengkap !');
+            }
+
+        }
+            
+
+            // var url_string = window.location;
+            // var url = new URL(url_string);
+            // var nameV = url.searchParams.get("name");
+            // // var tvid = url.searchParams.get("id");
+            // document.getElementById("nameP").innerHTML = nameV.value;
+        
+        </script>  
+        <body>  
+            
+            <div class="content">
+                <!-- <form>  -->
+                    Name Pelanggan: <input type="text" name="name" id="nama_p" maxlength="30"  required ><br/>  
+
+                    Email: <input type="email" name="email" id="email" required><br/>  
+
+                    Jam Keberangkatan : <input type="time" id="jam_k" min="00:00" max="23.59" required><br/>
+
+                    Tujuan Keberangkatan : <input type="text" id="tujuan_k" required><br/>
+
+                    Jumlah Tiket : <input type="number" name="jumlah_t" id="jumlah_t" min="0" max="10" required><br/>
+
+                    <input type="submit" onclick="validateform()" value="Submit now" />  
+       
+                
+                <!-- </form> -->
+
+            
+            </div>
+            <p id="demo1">Default P tag</p>
+            <p id="demo2">Default P tag</p>
+            <p id="demo3">Default P tag</p>
+            <p id="demo4">Default P tag</p>
+            <p id="demo5">Default P tag</p>
+
+       
+          
+</body>
+</html>

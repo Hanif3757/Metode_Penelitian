@@ -1,0 +1,44 @@
+<form id="main_form">
+  <div id="questions_wrapper">
+    <p>what is a?</p>
+    <div>
+      <input type="radio" required="" name="q_0" value="a" id="a_0">
+      <label for="a_0">a</label>
+      <input type="radio" required="" name="q_0" value="b" id="a_1">
+      <label for="a_1">b</label>
+      <input type="radio" required="" name="q_0" value="c" id="a_2">
+      <label for="a_2">c</label>
+      <input type="radio" required="" name="q_0" value="d" id="a_3">
+      <label for="a_3">d</label>
+    </div>
+    <div class="question range">
+      <label for="a_13">A?</label>
+      <input type="range" required="" name="q_3" id="a_13" min="0" max="10" step="1" list="q_3_dl">
+      <datalist id="q_3_dl">
+        <option value="0"></option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+      </datalist>
+    </div>
+    <p>A and/or B?</p>
+    <div>
+      <input type="checkbox" name="q_4" value="A" id="a_14">
+      <label for="a_14">A</label>
+      <input type="checkbox" name="q_4" value="B" id="a_15">
+      <label for="a_15">B</label>
+    </div>
+  </div>
+  <button id="btn" type="submit">OK</button>
+</form>
+
+
+<div id="results_wrapper"></div>
+

@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+    alert("pass terlalu pendek")
+  return false;  
+} else{
+    document.getElementById("demo").innerHTML =  "Nama : " + name;  
+    document.getElementById("demo2").innerHTML =  "password " + password;   
+    return false;
+  }
+}  
+</script>  
+<body>  
+    <p id="demo"></p>
+    <p id="demo2"></p>
+<form name="myform" method="post" action="http://127.0.0.1:5500/Example/coba.html" onsubmit="return validateform()" >  
+Name: <input type="text" name="name" required><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>
